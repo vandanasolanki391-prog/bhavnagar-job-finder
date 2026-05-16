@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OCR PDF - PDFSmart Tools</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="logo">📄 PDFSmart Tools</div>
+    <a href="index.html" class="home-btn">← Back to Home</a>
+</header>
+
+<section class="tool-page">
+    <div class="tool-card">
+        <h1>🔍 OCR PDF</h1>
+        <p>Upload a scanned PDF and extract readable text from it.</p>
+
+        <label for="ocrPdfUpload" class="upload-btn">📤 Choose PDF File</label>
+        <input type="file" id="ocrPdfUpload" accept="application/pdf" hidden>
+
+        <div id="ocrStatus" class="status-box">No file selected.</div>
+
+        <textarea id="ocrResult" placeholder="Extracted text will appear here..." rows="12"></textarea>
+
+        <div class="action-row">
+            <button id="copyTextBtn">📋 Copy Text</button>
+            <button id="downloadTextBtn">⬇️ Download Text</button>
+        </div>
+    </div>
+</section>
+
+<script src="ocr-pdf.js"></script>
+
+</body>
+</html>
